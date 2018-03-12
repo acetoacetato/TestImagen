@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 
 public class MapHandler {
 
-	private static String direccion = "IBC,valparaíso";
+	private static String direccion = "camilo+henriquez+4142,puente+alto";
 	private static String size = "410x297" ;//412x299
 	
 	public static ImageIcon cargaMapa() throws IOException {
