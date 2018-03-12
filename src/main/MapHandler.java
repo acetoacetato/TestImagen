@@ -10,6 +10,7 @@ import javax.swing.ImageIcon;
 public class MapHandler {
 
 	private static String direccion = "IBC,valparaíso";
+	private static String size = "410x297" ;//412x299
 	
 	public static ImageIcon cargaMapa() throws IOException {
 		
@@ -17,10 +18,11 @@ public class MapHandler {
 					  + "center="
 					  + direccion
 					  //+"&size=317x250"
-					  +"&size=293x226"
-					  +"&zoom=18"
-					  +"&maptype=roadmap"
-					  +"&key=AIzaSyC4ClGpPgudrfyIWrO528j9DxXLiLQ3KlU";
+					  + "&size="
+					  + size
+					  + "&zoom=18"
+					  + "&maptype=roadmap"
+					  + "&key=AIzaSyC4ClGpPgudrfyIWrO528j9DxXLiLQ3KlU";
 		
 		
 		URL url = new URL(path);
@@ -29,16 +31,17 @@ public class MapHandler {
 				
 	}
 	
-	public static ImageIcon cargaMapa(String dirección) throws IOException {
+	public static ImageIcon cargaMapa(String direccion) throws IOException {
 		
 		String path = "https://maps.googleapis.com/maps/api/staticmap?"
 					  + "center="
-					  + dirección
+					  + direccion
 					  //+"&size=317x250"
-					  +"&size=293x226"
-					  +"&zoom=18"
-					  +"&maptype=roadmap"
-					  +"&key=AIzaSyC4ClGpPgudrfyIWrO528j9DxXLiLQ3KlU";
+					  + "&size="
+					  + size
+					  + "&zoom=18"
+					  + "&maptype=roadmap"
+					  + "&key=AIzaSyC4ClGpPgudrfyIWrO528j9DxXLiLQ3KlU";
 		
 		
 		URL url = new URL(path);
@@ -48,16 +51,17 @@ public class MapHandler {
 	}
 	
 	
-	public static ImageIcon cargaMapa(String dirección, String[] puntos) throws IOException {
+	public static ImageIcon cargaMapa(String dir, String[] puntos) throws IOException {
 		//	TODO: AGREGAR EL PROCESO DE PONER PUNTOS EN LA URL
 		String path = "https://maps.googleapis.com/maps/api/staticmap?"
 					  + "center="
-					  + dirección
+					  + dir
 					  //+"&size=317x250"
-					  +"&size=293x226"
-					  +"&zoom=18"
-					  +"&maptype=roadmap"
-					  +"&key=AIzaSyC4ClGpPgudrfyIWrO528j9DxXLiLQ3KlU";
+					  + "&size="
+					  + size
+					  + "&zoom=18"
+					  + "&maptype=roadmap"
+					  + "&key=AIzaSyC4ClGpPgudrfyIWrO528j9DxXLiLQ3KlU";
 		
 		
 		URL url = new URL(path);
